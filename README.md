@@ -29,7 +29,6 @@ To create a podcast website using APIs and React.js.
 - Node -  Package manager
 - Tailwind - CSS Framework
 - VSCode - IDE
-- Figma - Wireframe & preliminary design
 ## To-Do
 
  * TO-DO:
