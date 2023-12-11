@@ -6,12 +6,12 @@ This is a capstone project for the Dynamic Web Apps course provided by Codespace
 ### Project Aims:
 To create a podcast website using APIs and React.js.
 
-["The Curious Cast"]( "https://comfy-daffodil-4b60b6.netlify.app/")
+[The Curious Cast]( https://comfy-daffodil-4b60b6.netlify.app/)
 
 
 
 ## Authors
--["Nancy Mkhize"] ("https://github.com/Nancy-Mkhize")
+-[Nancy Mkhize] (https://github.com/Nancy-Mkhize)
 
 
 
