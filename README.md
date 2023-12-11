@@ -11,9 +11,7 @@ To create a podcast website using APIs and React.js.
 
 
 ## Authors
--[Nancy Mkhize] (https://github.com/Nancy-Mkhize)
-
-
+[Nancy Mkhize](https://github.com/Nancy-Mkhize)
 
 ## Features
 
