@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlayCircle, faPauseCircle } from "@fortawesome/free-solid-svg-icons";
@@ -22,8 +21,15 @@ function AudioPlayer({ image, title, episodeTitle, audioSource }) {
     setIsPlaying(nextIsPlaying);
 
     if (nextIsPlaying) {
-      ref.current.play();
-      progressAnimation.current = requestAnimationFrame(songPlaying);
+      ref.current
+        .play()
+        .then(() => {
+          console.log("Audio playback started");
+          progressAnimation.current = requestAnimationFrame(songPlaying);
+        })
+        .catch((error) => {
+          console.error("Error starting audio playback:", error);
+        });
     } else {
       ref.current.pause();
       cancelAnimationFrame(progressAnimation.current);
@@ -85,11 +91,9 @@ function AudioPlayer({ image, title, episodeTitle, audioSource }) {
         <source src={audioSource} type="audio/ogg" />
       </audio>
 
-      {/* Additional code to include */}
       <figure className="hidden">
         <audio controls src="https://podcast-api.netlify.app/placeholder-audio.mp3">
           <a href="https://podcast-api.netlify.app/placeholder-audio.mp3">
-            Download audio
           </a>
         </audio>
       </figure>
@@ -98,4 +102,3 @@ function AudioPlayer({ image, title, episodeTitle, audioSource }) {
 }
 
 export default AudioPlayer;
-
